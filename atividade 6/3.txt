@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() {
+    int prato, sobremesa, bebida;
+    float total_calorias = 0;
+
+    printf("Escolha o prato (1-4): ");
+    scanf("%d", &prato);
+
+    printf("Escolha a sobremesa (1-4): ");
+    scanf("%d", &sobremesa);
+
+    printf("Escolha a bebida (1-4): ");
+    scanf("%d", &bebida);
+
+    if (prato == 1) {
+        total_calorias += 180;
+    } else if (prato == 2) {
+        total_calorias += 230;
+    } else if (prato == 3) {
+        total_calorias += 250;
+    } else if (prato == 4) {
+        total_calorias += 350;
+    } else {
+        printf("Opção de prato inválida.\n");
+    }
+
+    if (sobremesa == 1) {
+        total_calorias += 75;
+    } else if (sobremesa == 2) {
+        total_calorias += 110;
+    } else if (sobremesa == 3) {
+        total_calorias += 170;
+    } else if (sobremesa == 4) {
+        total_calorias += 200;
+    } else {
+        printf("Opção de sobremesa inválida.\n");
+    }
+
+    if (bebida == 1) {
+        total_calorias += 20;
+    } else if (bebida == 2) {
+        total_calorias += 70;
+    } else if (bebida == 3) {
+        total_calorias += 65;
+    } else if (bebida == 4) {
+        total_calorias += 250;
+    } else {
+        printf("Opção de bebida inválida.\n");
+    }
+
+    printf("A quantidade total de calorias da refeição é: %.2f calorias\n", total_calorias);
+}
